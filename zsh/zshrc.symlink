@@ -24,7 +24,7 @@ ZSH_THEME="aussiegeek"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github osx rails3 textmate ruby gem rbenv cloudapp heroku brew vagrant autojump zsh-syntax-highlighting)
+plugins=(git github osx rails textmate ruby gem rbenv cloudapp heroku brew vagrant autojump zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,7 +46,7 @@ alias uncrustify-objc='uncrustify -c ~/.uncrustify/objc.cfg -l OC --replace --no
 
 # Ruby/Rails
 alias b='bundle'
-alias bi='b install --verbose --path vendor --binstubs=bundle_bin'
+alias bi='b install --verbose --path vendor --binstubs'
 alias bu='b update'
 alias be='b exec'
 #alias rake='./bundle_bin/rake'
