@@ -4,4 +4,4 @@ export PATH=$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-[[ -s /usr/local/share/python/virtualenvwrapper.sh ]] && source /usr/local/share/python/virtualenvwrapper.sh
+[[ -s $(brew --prefix)/bin/virtualenvwrapper.sh ]] && source $(brew --prefix)/bin/virtualenvwrapper.sh
