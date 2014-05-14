@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH=$HOME/src/github.com/jeanregisser/dotfiles/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs

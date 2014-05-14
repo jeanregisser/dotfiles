@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+source "$WORKON_HOME/ponydenv/bin/activate"
+ponyd "$@"
+
