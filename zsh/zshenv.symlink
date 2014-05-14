@@ -1,5 +1,12 @@
 export PATH=$HOME/src/github.com/jeanregisser/dotfiles/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
 
+# rbenv
+if which rbenv > /dev/null
+then 
+	export RBENV_ROOT=$HOME/.rbenv
+	eval "$(rbenv init -)"
+fi
+
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 [[ -s $(brew --prefix)/bin/virtualenvwrapper.sh ]] && source $(brew --prefix)/bin/virtualenvwrapper.sh
