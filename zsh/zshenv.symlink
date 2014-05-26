@@ -1,4 +1,4 @@
-export PATH=$HOME/src/github.com/jeanregisser/dotfiles/bin:$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH=$HOME/src/github.com/jeanregisser/dotfiles/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH
 
 # rbenv
 if which rbenv > /dev/null
