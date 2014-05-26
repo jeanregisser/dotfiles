@@ -10,8 +10,10 @@ antigen bundles <<EOBUNDLES
   command-not-found
   
   git
+  git-extras
   github
   osx
+  bundler
   rails
   textmate
   ruby
@@ -19,8 +21,16 @@ antigen bundles <<EOBUNDLES
   rbenv
   heroku
   brew
+  brew-cask
   vagrant
   autojump
+  colored-man
+  meteor
+  pip
+  npm
+  safe-paste
+  web-search
+  urltools
   
   # Syntax highlighting bundle
   zsh-users/zsh-syntax-highlighting
@@ -53,9 +63,7 @@ alias uncrustify-objc='uncrustify -c ~/.uncrustify/objc.cfg -l OC --replace --no
 
 # Ruby/Rails
 alias b='bundle'
-alias bi='b install --verbose --path vendor --binstubs'
-alias bu='b update'
-alias be='b exec'
+alias bi='bi --verbose --path vendor --binstubs'
 #alias rake='./bundle_bin/rake'
 alias tguard='TESTUNIT_ONLY=true guard'
 alias rguard='RSPEC_ONLY=true guard'
