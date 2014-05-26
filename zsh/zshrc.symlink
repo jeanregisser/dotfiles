@@ -24,6 +24,9 @@ antigen bundles <<EOBUNDLES
   
   # Syntax highlighting bundle
   zsh-users/zsh-syntax-highlighting
+
+  # Legit completion
+  blueyed/legit extra/zsh-completion --branch=fix-zsh-completion
 EOBUNDLES
 
 # Load the theme.
