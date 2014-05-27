@@ -42,7 +42,8 @@ antigen bundles <<EOBUNDLES
 EOBUNDLES
 
 # Load the theme.
-antigen theme aussiegeek
+#antigen theme aussiegeek
+antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
