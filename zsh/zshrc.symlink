@@ -6,16 +6,12 @@ antigen use oh-my-zsh
 
 # Bundles
 antigen bundles <<EOBUNDLES
-  # Guess what to install when running an unknown command
-  command-not-found
-  
   git
   git-extras
   github
   osx
   bundler
   rails
-  textmate
   ruby
   gem
   rbenv
