@@ -1,3 +1,5 @@
+start_time="$(($(date +%s%N)/1000000))"
+
 # Antigen — A zsh plugin manager
 source $HOME/src/github.com/zsh-users/antigen/antigen.zsh
 
@@ -77,3 +79,6 @@ alias pod='nocorrect pod'
 
 # grc
 source "`brew --prefix grc`/etc/grc.bashrc"
+
+end_time="$(($(date +%s%N)/1000000))"
+echo .zshrc: $((end_time - start_time)) ms
