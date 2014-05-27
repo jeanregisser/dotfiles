@@ -32,6 +32,7 @@ antigen bundles <<EOBUNDLES
   web-search
   urltools
   pod
+  docker
   
   # Syntax highlighting bundle
   zsh-users/zsh-syntax-highlighting
