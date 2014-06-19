@@ -59,6 +59,8 @@ else
 	eval `dircolors -b /etc/DIR_COLORS`
 fi
 
+alias vi='vim'
+
 alias astyle-orb='astyle --indent=tab --add-brackets --brackets=attach --break-closing-brackets --indent-labels --pad-header --pad-oper --unpad-paren --align-pointer=type --keep-one-line-statements --keep-one-line-blocks --indent-preprocessor'
 alias uncrustify-objc='uncrustify -c ~/.uncrustify/objc.cfg -l OC --replace --no-backup'
 
