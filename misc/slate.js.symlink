@@ -199,9 +199,9 @@ S.bnda({
 
   // Basic Location Bindings
   "pad0:ctrl" : lapLeft,
-  "[:ctrl" : lapChat,
+  //"[:ctrl" : lapChat,
   "pad.:ctrl" : lapRight,
-  "]:ctrl" : lapMain,
+  //"]:ctrl" : lapMain,
   "pad1:ctrl" : tboltBottomLeft,
   "pad2:ctrl" : tboltBottomMid,
   "pad3:ctrl" : tboltBottomRight,
