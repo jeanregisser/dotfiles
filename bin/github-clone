@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+source "$(dirname "$0")/script-helpers"
+
+DEST="$HOME/src/github.com/$1"
+REPO_URL="https://github.com/$1.git"
+
+if [[ ! -d "$DEST" ]]; then
+	msg "Cloning $REPO_URL to $DEST"
+	git clone "$REPO_URL" "$DEST"
+else
+	msg "Updating cloned repo in $DEST"
+	cd "$DEST"
+	git pull --rebase
+fi

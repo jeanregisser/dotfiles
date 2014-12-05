@@ -1,0 +1,64 @@
+#!/usr/bin/env zsh
+
+source "$(dirname "$0")/script-helpers"
+
+msg "Homebrew: Casks"
+
+brew install caskroom/cask/brew-cask
+
+brew cask install macvim
+brew cask install textmate
+brew cask install caskroom/versions/sublime-text3
+brew cask install firefox
+brew cask install google-chrome
+brew cask install dropbox
+brew cask install onepassword
+brew cask install gimp
+brew cask install hipchat
+brew cask install screenhero
+brew cask install skype
+brew cask install iterm2
+brew cask install flux
+brew cask install slate
+brew cask install gitx-rowanj
+brew cask install github
+brew cask install sourcetree
+brew cask install oclint
+brew cask install arq
+brew cask install spotify
+brew cask install wireshark
+brew cask install beamer
+brew cask install trailer
+brew cask install hockeyapp
+brew cask install subtitles
+brew cask install hazel
+brew cask install vagrant
+brew cask install virtualbox
+brew cask install vlc
+brew cask install steam
+brew cask install ngrok
+brew cask install imageoptim
+brew cask install imagealpha
+brew cask install pdfshaver
+brew cask install colorpicker-skalacolor
+brew cask install handbrake
+brew cask install teamviewer
+brew cask install cyberduck
+brew cask install vlc
+brew cask install deezer
+brew cask install rdio
+brew cask install smartloader
+brew cask install genymotion
+brew cask install viscosity
+brew cask install bartender
+brew cask install simpholders-2-alpha
+brew cask install x-moto
+brew cask install inkscape
+brew cask install namebench
+brew cask install slack
+brew cask install sqwiggle
+
+brew cask install caskroom/fonts/font-source-code-pro
+brew cask install caskroom/fonts/font-sauce-code-powerline
+
+brew cask cleanup

@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+source "$(dirname "$0")/script-helpers"
+
+msg "Global npm packages"
+
+PACKAGES=(
+	coffee-script
+	coffeelint
+	jsonlint
+	js-yaml
+	meteorite
+	)
+
+npm install -g ${PACKAGES[@]}

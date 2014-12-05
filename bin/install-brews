@@ -1,0 +1,52 @@
+#!/usr/bin/env zsh
+
+source "$(dirname "$0")/script-helpers"
+
+msg "Homebrew: Brews"
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew upgrade
+
+brew install coreutils
+brew install vim --override-system-vi
+brew install git
+brew install git-extras
+brew install hub
+brew install legit
+brew install the_silver_searcher
+brew install figlet
+brew install grc
+brew install mongodb
+brew install homebrew/versions/mongodb24
+brew install redis
+brew install node
+brew install autojump
+brew install nmap
+brew install wget
+brew install resty
+brew install rbenv
+brew install ruby-build
+brew install python
+brew install mitmproxy
+brew install class-dump
+brew install gist
+brew install parallel
+brew install mosh
+brew install ssh-copy-id
+brew install uncrustify
+brew install imagemagick
+brew install xctool
+brew install heroku-toolbelt
+brew install archey
+brew install tree
+brew install lighttpd
+brew install jq
+brew install aria2
+brew install ctags
+brew install mackup
+
+# Remove outdated versions from the cellar
+brew cleanup

@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+#
+# dot
+#
+# `dot` handles installation, updates, things like that. Run it periodically
+# to make sure you're on the latest and greatest.
+
+BIN_PATH="$(dirname "$0")"
+source "$BIN_PATH/script-helpers"
+
+EXPECTED_SHELL="/bin/zsh"
+if [[ "$SHELL" != "$EXPECTED_SHELL" ]]; then
+	msg "Setting shell to $EXPECTED_SHELL"
+	chsh -s $EXPECTED_SHELL
+fi
+
+if ! hash brew 2>/dev/null; then
+	msg "Installing Homebrew..."
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+msg "Installing dotfiles..."
+"$BIN_PATH/install-dotfiles"
+
+"$BIN_PATH/install-brews"
+"$BIN_PATH/install-casks"
+"$BIN_PATH/install-rubies"
+"$BIN_PATH/install-gems"
+"$BIN_PATH/install-npm-packages"
+"$BIN_PATH/install-pip-packages"
+
+"$BIN_PATH/download-dropbox-essentials"
+msg "Restoring mackup files..."
+/usr/local/bin/mackup restore
+
+msg "Cloning repos..."
+"$BIN_PATH/github-clone" zsh-users/antigen
+"$BIN_PATH/github-clone" mitmproxy/mitmproxy
+"$BIN_PATH/github-clone" facebook/chisel
+"$BIN_PATH/github-clone" square/PonyDebugger
+
+msg "Configuring OS X settings..."
+$BIN_PATH/set-osx-defaults.sh
+
+msg 'Running OSX Software Updates...'
+sudo softwareupdate -i -a
+
+# ensure FileVault is active
+if ! sudo fdesetup isactive >/dev/null 2>&1; then
+    msg "Full Disk Encryption"
+    read -p "Do you want to enable Full Disk Encryption? [Yn]" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo ''
+        sudo fdesetup enable
+    fi
+fi
+
+if [[ ! -d "$HOME/.spf13-vim-3" ]]; then
+    msg "Installing spf13-vim..."
+    curl http://j.mp/spf13-vim3 -L -o - | sh
+fi
+
+success "All done."
