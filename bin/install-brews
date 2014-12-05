@@ -19,8 +19,8 @@ brew install legit
 brew install the_silver_searcher
 brew install figlet
 brew install grc
-brew install mongodb
 brew install homebrew/versions/mongodb24
+brew install mongodb
 brew install redis
 brew install node
 brew install autojump
