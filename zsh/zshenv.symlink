@@ -1,7 +1,9 @@
-export PATH="/usr/local/bin:$PATH"
+# Use this var instead of $(brew --prefix xxx) as it's too slow (takes about 130ms per call!)
+export HOMEBREW_PREFIX="/usr/local"
 
-if hash brew 2>/dev/null && [[ -d "$(brew --prefix coreutils)/libexec/gnubin" ]]; then
-	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+COREUTILS_PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin"
+if [[ -d "$COREUTILS_PATH" ]]; then
+	export PATH="$COREUTILS_PATH:$PATH"
 fi
 
 export PATH="$HOME/src/github.com/jeanregisser/dotfiles/bin:$PATH"
@@ -14,8 +16,9 @@ fi
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-if hash brew 2>/dev/null && [[ -s "$(brew --prefix)/bin/virtualenvwrapper.sh" ]]; then
-	source "$(brew --prefix)/bin/virtualenvwrapper.sh"
+VIRTUALENVWRAPPER="$HOMEBREW_PREFIX/bin/virtualenvwrapper.sh"
+if [[ -s "$VIRTUALENVWRAPPER" ]]; then
+	source "$VIRTUALENVWRAPPER"
 fi
 
 # Homebrew cask

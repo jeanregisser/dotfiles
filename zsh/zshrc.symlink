@@ -89,8 +89,9 @@ alias pod='nocorrect pod'
 #compdef git-achievements=git
 
 # grc
-if hash brew 2>/dev/null && [[ -s "$(brew --prefix grc)/etc/grc.bashrc" ]]; then
-  source "$(brew --prefix grc)/etc/grc.bashrc"
+GRC="$HOMEBREW_PREFIX/opt/grc/etc/grc.bashrc"
+if [[ -s "$GRC" ]]; then
+  source "$GRC"
 fi
 
 end_time="$(($EPOCHREALTIME*1000))"
