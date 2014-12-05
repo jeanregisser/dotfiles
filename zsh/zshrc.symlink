@@ -57,7 +57,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 # Enable colors for ls, etc.
-if [[ -f ~/.dir_colors ]]; then
+if hash dircolors 2>/dev/null && [[ -f ~/.dir_colors ]]; then
 	eval `dircolors -b ~/.dir_colors`
 fi
 
@@ -89,7 +89,9 @@ alias pod='nocorrect pod'
 #compdef git-achievements=git
 
 # grc
-[[ -s "$(brew --prefix grc)/etc/grc.bashrc" ]] && source "$(brew --prefix grc)/etc/grc.bashrc"
+if hash brew 2>/dev/null && [[ -s "$(brew --prefix grc)/etc/grc.bashrc" ]]; then
+  source "$(brew --prefix grc)/etc/grc.bashrc"
+fi
 
 end_time="$(($EPOCHREALTIME*1000))"
 echo ".zshrc: $((int(end_time - start_time))) ms"

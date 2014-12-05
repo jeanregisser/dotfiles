@@ -1,6 +1,6 @@
 export PATH="/usr/local/bin:$PATH"
 
-if [[ -d "$(brew --prefix coreutils)/libexec/gnubin" ]]; then
+if hash brew 2>/dev/null && [[ -d "$(brew --prefix coreutils)/libexec/gnubin" ]]; then
 	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 fi
 
@@ -14,7 +14,9 @@ fi
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-[[ -s "$(brew --prefix)/bin/virtualenvwrapper.sh" ]] && source "$(brew --prefix)/bin/virtualenvwrapper.sh"
+if hash brew 2>/dev/null && [[ -s "$(brew --prefix)/bin/virtualenvwrapper.sh" ]]; then
+	source "$(brew --prefix)/bin/virtualenvwrapper.sh"
+fi
 
 # Homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
