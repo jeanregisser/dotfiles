@@ -1,4 +1,6 @@
-start_time="$(($(date +%s%N)/1000000))"
+zmodload zsh/datetime
+zmodload zsh/mathfunc
+start_time="$(($EPOCHREALTIME*1000))"
 
 if [[ -s "$HOME/src/github.com/zsh-users/antigen/antigen.zsh" ]]; then
   # Antigen — A zsh plugin manager
@@ -89,5 +91,5 @@ alias pod='nocorrect pod'
 # grc
 [[ -s "$(brew --prefix grc)/etc/grc.bashrc" ]] && source "$(brew --prefix grc)/etc/grc.bashrc"
 
-end_time="$(($(date +%s%N)/1000000))"
-echo .zshrc: $((end_time - start_time)) ms
+end_time="$(($EPOCHREALTIME*1000))"
+echo ".zshrc: $((int(end_time - start_time))) ms"
