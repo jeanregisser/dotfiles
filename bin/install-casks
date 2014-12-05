@@ -20,7 +20,7 @@ brew cask install skype
 brew cask install iterm2
 brew cask install flux
 brew cask install slate
-brew cask install gitx-rowanj
+brew cask install rowanj-gitx
 brew cask install github
 brew cask install sourcetree
 brew cask install oclint
