@@ -10,44 +10,58 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-brew install coreutils
-brew install vim --override-system-vi
-brew install git
-brew install git-extras
-brew install hub
-brew install legit
-brew install the_silver_searcher
-brew install figlet
-brew install grc
-brew install homebrew/versions/mongodb24
-brew install mongodb
-brew install redis
-brew install node
-brew install autojump
-brew install nmap
-brew install wget
-brew install resty
-brew install rbenv
-brew install ruby-build
-brew install libxml2
-brew install python
-brew install mitmproxy
-brew install class-dump
-brew install gist
-brew install parallel
-brew install mosh
-brew install ssh-copy-id
-brew install uncrustify
-brew install imagemagick
-brew install xctool
-brew install heroku-toolbelt
-brew install archey
-brew install tree
-brew install lighttpd
-brew install jq
-brew install aria2
-brew install ctags
-brew install mackup
+FORMULAE=(
+	coreutils
+	"vim --override-system-vi"
+	git
+	git-extras
+	hub
+	legit
+	the_silver_searcher
+	figlet
+	grc
+	homebrew/versions/mongodb24
+	mongodb
+	redis
+	node
+	autojump
+	nmap
+	wget
+	resty
+	rbenv
+	ruby-build
+	libxml2
+	python
+	mitmproxy
+	class-dump
+	gist
+	parallel
+	mobile-shell
+	ssh-copy-id
+	uncrustify
+	imagemagick
+	xctool
+	heroku-toolbelt
+	archey
+	tree
+	lighttpd
+	jq
+	aria2
+	ctags
+	mackup
+	)
+
+INSTALLED_FORMULAE="$(brew list -1)"
+
+for formula in "${FORMULAE[@]}"
+do
+	NAME="$(echo "$formula" | awk '{ print $1 }')"
+	SHORT_NAME="$(basename "$NAME")"
+
+	if ! grep -qx "$SHORT_NAME" <<< "$INSTALLED_FORMULAE"; then
+		brew install ${(z)formula}
+	fi
+done
 
 # Remove outdated versions from the cellar
 brew cleanup
