@@ -25,6 +25,7 @@ brew cask install github
 brew cask install sourcetree
 brew cask install oclint
 brew cask install arq
+brew cask install xquartz
 brew cask install spotify
 brew cask install wireshark
 brew cask install beamer
