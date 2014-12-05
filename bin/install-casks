@@ -4,62 +4,73 @@ source "$(dirname "$0")/script-helpers"
 
 msg "Homebrew: Casks"
 
-brew install caskroom/cask/brew-cask
+CASKS=(
+	macvim
+	textmate
+	caskroom/versions/sublime-text3
+	firefox
+	google-chrome
+	dropbox
+	onepassword
+	gimp
+	hipchat
+	screenhero
+	skype
+	iterm2-beta
+	flux
+	slate
+	rowanj-gitx
+	github
+	sourcetree
+	oclint
+	arq
+	xquartz
+	spotify
+	wireshark
+	beamer
+	trailer
+	hockeyapp
+	subtitles
+	hazel
+	vagrant
+	virtualbox
+	vlc
+	steam
+	ngrok
+	imageoptim
+	imagealpha
+	pdfshaver
+	colorpicker-skalacolor
+	handbrake
+	teamviewer
+	cyberduck
+	vlc
+	deezer
+	rdio
+	smartloader
+	genymotion
+	viscosity
+	bartender
+	simpholders-2-alpha
+	x-moto
+	inkscape
+	namebench
+	slack
+	sqwiggle
+	caskroom/fonts/font-source-code-pro
+	caskroom/fonts/font-sauce-code-powerline
+	)
 
-brew cask install macvim
-brew cask install textmate
-brew cask install caskroom/versions/sublime-text3
-brew cask install firefox
-brew cask install google-chrome
-brew cask install dropbox
-brew cask install onepassword
-brew cask install gimp
-brew cask install hipchat
-brew cask install screenhero
-brew cask install skype
-brew cask install iterm2-beta
-brew cask install flux
-brew cask install slate
-brew cask install rowanj-gitx
-brew cask install github
-brew cask install sourcetree
-brew cask install oclint
-brew cask install arq
-brew cask install xquartz
-brew cask install spotify
-brew cask install wireshark
-brew cask install beamer
-brew cask install trailer
-brew cask install hockeyapp
-brew cask install subtitles
-brew cask install hazel
-brew cask install vagrant
-brew cask install virtualbox
-brew cask install vlc
-brew cask install steam
-brew cask install ngrok
-brew cask install imageoptim
-brew cask install imagealpha
-brew cask install pdfshaver
-brew cask install colorpicker-skalacolor
-brew cask install handbrake
-brew cask install teamviewer
-brew cask install cyberduck
-brew cask install vlc
-brew cask install deezer
-brew cask install rdio
-brew cask install smartloader
-brew cask install genymotion
-brew cask install viscosity
-brew cask install bartender
-brew cask install simpholders-2-alpha
-brew cask install x-moto
-brew cask install inkscape
-brew cask install namebench
-brew cask install slack
-brew cask install sqwiggle
+INSTALLED_CASKS="$(brew cask list -1)"
 
-brew cask install caskroom/fonts/font-source-code-pro
-brew cask install caskroom/fonts/font-sauce-code-powerline
+for cask in "${CASKS[@]}"
+do
+	NAME="$(awk '{ print $1 }' <<< "$cask")"
+	SHORT_NAME="$(basename "$NAME")"
+
+	if ! grep -qx "$SHORT_NAME" <<< "$INSTALLED_CASKS"; then
+		brew cask install ${(z)cask}
+	fi
+done
 
 brew cask cleanup
