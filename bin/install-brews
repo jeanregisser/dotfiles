@@ -55,7 +55,7 @@ INSTALLED_FORMULAE="$(brew list -1)"
 
 for formula in "${FORMULAE[@]}"
 do
-	NAME="$(echo "$formula" | awk '{ print $1 }')"
+	NAME="$(awk '{ print $1 }' <<< "$formula")"
 	SHORT_NAME="$(basename "$NAME")"
 
 	if ! grep -qx "$SHORT_NAME" <<< "$INSTALLED_FORMULAE"; then
