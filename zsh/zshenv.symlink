@@ -1,15 +1,20 @@
-export PATH=$HOME/src/github.com/jeanregisser/dotfiles/bin:$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+
+if [[ -d "$(brew --prefix coreutils)/libexec/gnubin" ]]; then
+	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
+
+export PATH="$HOME/src/github.com/jeanregisser/dotfiles/bin:$PATH"
 
 # rbenv
-if which rbenv > /dev/null
-then 
-	export RBENV_ROOT=$HOME/.rbenv
+if hash rbenv 2>/dev/null; then
+	export RBENV_ROOT="$HOME/.rbenv"
 	eval "$(rbenv init -)"
 fi
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
-[[ -s $(brew --prefix)/bin/virtualenvwrapper.sh ]] && source $(brew --prefix)/bin/virtualenvwrapper.sh
+[[ -s "$(brew --prefix)/bin/virtualenvwrapper.sh" ]] && source "$(brew --prefix)/bin/virtualenvwrapper.sh"
 
 # Homebrew cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"

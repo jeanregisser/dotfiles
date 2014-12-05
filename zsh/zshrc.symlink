@@ -1,50 +1,52 @@
 start_time="$(($(date +%s%N)/1000000))"
 
-# Antigen — A zsh plugin manager
-source $HOME/src/github.com/zsh-users/antigen/antigen.zsh
+if [[ -s "$HOME/src/github.com/zsh-users/antigen/antigen.zsh" ]]; then
+  # Antigen — A zsh plugin manager
+  source $HOME/src/github.com/zsh-users/antigen/antigen.zsh
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+  # Load the oh-my-zsh's library.
+  antigen use oh-my-zsh
 
-# Bundles
-antigen bundles <<EOBUNDLES
-  git
-  git-extras
-  github
-  osx
-  bundler
-  rails
-  ruby
-  gem
-  rbenv
-  heroku
-  brew
-  brew-cask
-  vagrant
-  autojump
-  colored-man
-  meteor
-  pip
-  npm
-  safe-paste
-  web-search
-  urltools
-  pod
-  docker
-  
-  # Syntax highlighting bundle
-  zsh-users/zsh-syntax-highlighting
+  # Bundles
+  antigen bundles <<EOBUNDLES
+    git
+    git-extras
+    github
+    osx
+    bundler
+    rails
+    ruby
+    gem
+    rbenv
+    heroku
+    brew
+    brew-cask
+    vagrant
+    autojump
+    colored-man
+    meteor
+    pip
+    npm
+    safe-paste
+    web-search
+    urltools
+    pod
+    docker
+    
+    # Syntax highlighting bundle
+    zsh-users/zsh-syntax-highlighting
 
-  # Legit completion
-  blueyed/legit extra/zsh-completion --branch=fix-zsh-completion
+    # Legit completion
+    blueyed/legit extra/zsh-completion --branch=fix-zsh-completion
 EOBUNDLES
 
-# Load the theme.
-#antigen theme aussiegeek
-antigen bundle sindresorhus/pure
+  # Load the theme.
+  #antigen theme aussiegeek
+  antigen bundle sindresorhus/pure
 
-# Tell antigen that you're done.
-antigen apply
+  # Tell antigen that you're done.
+  antigen apply
+fi
 
 # Customize to your needs...
 export LC_ALL=en_US.UTF-8
@@ -52,11 +54,9 @@ export LANG=en_US.UTF-8
 
 export EDITOR='vim'
 
-# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+# Enable colors for ls, etc.
 if [[ -f ~/.dir_colors ]]; then
 	eval `dircolors -b ~/.dir_colors`
-else
-	eval `dircolors -b /etc/DIR_COLORS`
 fi
 
 alias vi='vim'
@@ -87,7 +87,7 @@ alias pod='nocorrect pod'
 #compdef git-achievements=git
 
 # grc
-source "`brew --prefix grc`/etc/grc.bashrc"
+[[ -s "$(brew --prefix grc)/etc/grc.bashrc" ]] && source "$(brew --prefix grc)/etc/grc.bashrc"
 
 end_time="$(($(date +%s%N)/1000000))"
 echo .zshrc: $((end_time - start_time)) ms
