@@ -17,7 +17,7 @@ brew cask install gimp
 brew cask install hipchat
 brew cask install screenhero
 brew cask install skype
-brew cask install iterm2
+brew cask install iterm2-beta
 brew cask install flux
 brew cask install slate
 brew cask install rowanj-gitx
