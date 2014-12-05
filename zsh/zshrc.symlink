@@ -24,7 +24,6 @@ if [[ -s "$HOME/src/github.com/zsh-users/antigen/antigen.zsh" ]]; then
     brew
     brew-cask
     vagrant
-    autojump
     colored-man
     meteor
     pip
@@ -87,6 +86,12 @@ alias pod='nocorrect pod'
 #PATH=$PATH:~/Developments/git-achievements
 #alias git="git-achievements"
 #compdef git-achievements=git
+
+# autojump
+AUTOJUMP="$HOMEBREW_PREFIX/etc/autojump.zsh"
+if [[ -s "$AUTOJUMP" ]]; then
+  source "$AUTOJUMP"
+fi
 
 # grc
 GRC="$HOMEBREW_PREFIX/opt/grc/etc/grc.bashrc"
