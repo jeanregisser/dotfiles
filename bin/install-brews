@@ -49,6 +49,7 @@ FORMULAE=(
 	aria2
 	ctags
 	mackup
+	caskroom/cask/brew-cask
 	)
 
 INSTALLED_FORMULAE="$(brew list -1)"
