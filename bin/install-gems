@@ -4,6 +4,8 @@ source "$(dirname "$0")/script-helpers"
 
 msg "Global gems"
 
+gem update
+
 GEMS=(
 	bundler
     rubocop
@@ -11,4 +13,4 @@ GEMS=(
     scss-lint
 	)
 
-gem install ${GEMS[@]}
+gem install --conservative ${GEMS[@]}
