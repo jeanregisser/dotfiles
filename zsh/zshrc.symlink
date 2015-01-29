@@ -87,7 +87,7 @@ alias pod='nocorrect pod'
 #compdef git-achievements=git
 
 # autojump
-AUTOJUMP="$HOMEBREW_PREFIX/etc/autojump.zsh"
+AUTOJUMP="$HOMEBREW_PREFIX/etc/autojump.sh"
 if [[ -s "$AUTOJUMP" ]]; then
   source "$AUTOJUMP"
 fi
