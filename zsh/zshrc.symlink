@@ -67,7 +67,7 @@ alias uncrustify-objc='uncrustify -c ~/.uncrustify/objc.cfg -l OC --replace --no
 
 # Ruby/Rails
 alias b='bundle'
-alias bi='bi --verbose --path vendor --binstubs'
+alias bi='bi --verbose --path vendor'
 #alias rake='./bundle_bin/rake'
 alias tguard='TESTUNIT_ONLY=true guard'
 alias rguard='RSPEC_ONLY=true guard'
