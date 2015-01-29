@@ -41,6 +41,8 @@ CASKS=(
 	imagealpha
 	pdfshaver
 	colorpicker-skalacolor
+	sketch
+	omnigraffle
 	handbrake
 	teamviewer
 	cyberduck
