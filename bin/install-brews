@@ -8,7 +8,7 @@ msg "Homebrew: Brews"
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade
+brew upgrade --all
 
 FORMULAE=(
 	coreutils
