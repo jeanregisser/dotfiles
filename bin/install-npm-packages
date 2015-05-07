@@ -13,6 +13,7 @@ PACKAGES=(
 	js-yaml
 	meteorite
 	wscat
+	react-native-cli
 	)
 
 npm install -g ${PACKAGES[@]}
