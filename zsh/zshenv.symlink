@@ -6,7 +6,7 @@ if [[ -d "$COREUTILS_PATH" ]]; then
 	export PATH="$COREUTILS_PATH:$PATH"
 fi
 
-export PATH="$HOME/src/github.com/jeanregisser/dotfiles/bin:$PATH"
+export PATH="$HOME/bin:$HOME/src/github.com/jeanregisser/dotfiles/bin:$PATH"
 
 # rbenv
 if hash rbenv 2>/dev/null; then
