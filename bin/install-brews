@@ -31,6 +31,8 @@ FORMULAE=(
 	rbenv
 	ruby-build
 	libxml2
+	libidn
+	libcouchbase
 	python
 	mitmproxy
 	class-dump
@@ -46,9 +48,12 @@ FORMULAE=(
 	tree
 	lighttpd
 	jq
+	watchman
+	flow
 	aria2
 	ctags
 	mackup
+	s3cmd
 	caskroom/cask/brew-cask
 	)
 
