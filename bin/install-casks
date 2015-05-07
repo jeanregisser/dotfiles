@@ -59,6 +59,12 @@ CASKS=(
 	namebench
 	slack
 	sqwiggle
+	duet
+	couchbase-server-community
+	cronnix
+	launchrocket
+	4k-video-downloader
+	subler
 	caskroom/fonts/font-source-code-pro
 	caskroom/fonts/font-sauce-code-powerline
 	)
