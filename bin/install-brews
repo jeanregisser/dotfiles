@@ -54,6 +54,7 @@ FORMULAE=(
 	ctags
 	mackup
 	s3cmd
+	shellcheck
 	caskroom/cask/brew-cask
 	)
 
