@@ -14,6 +14,9 @@ PACKAGES=(
 	meteorite
 	wscat
 	react-native-cli
+  eslint
+  eslint-plugin-react
+  babel-eslint
 	)
 
 npm install -g ${PACKAGES[@]}
