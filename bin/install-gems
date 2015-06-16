@@ -11,6 +11,7 @@ GEMS=(
     rubocop
     ruby-lint
     scss-lint
+    cocoapods
 	)
 
 gem install --conservative ${GEMS[@]}
