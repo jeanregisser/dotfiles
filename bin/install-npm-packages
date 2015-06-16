@@ -7,16 +7,16 @@ msg "Global npm packages"
 npm update -g
 
 PACKAGES=(
-	coffee-script
-	coffeelint
-	jsonlint
-	js-yaml
-	meteorite
-	wscat
-	react-native-cli
+  coffee-script
+  coffeelint
+  jsonlint
+  js-yaml
+  meteorite
+  wscat
+  react-native-cli
   eslint
   eslint-plugin-react
   babel-eslint
-	)
+  )
 
 npm install -g ${PACKAGES[@]}
