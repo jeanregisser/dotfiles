@@ -17,6 +17,7 @@ PACKAGES=(
   eslint
   eslint-plugin-react
   babel-eslint
+  aglio
   )
 
 npm install -g ${PACKAGES[@]}
