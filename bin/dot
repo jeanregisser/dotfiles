@@ -26,6 +26,7 @@ msg "Installing dotfiles..."
 "$BIN_PATH/install-casks"
 "$BIN_PATH/install-rubies"
 "$BIN_PATH/install-gems"
+"$BIN_PATH/install-nodes"
 "$BIN_PATH/install-npm-packages"
 "$BIN_PATH/install-pip-packages"
 

@@ -23,7 +23,7 @@ FORMULAE=(
 	homebrew/versions/mongodb24
 	mongodb
 	redis
-	node
+	nvm
 	autojump
 	nmap
 	wget

@@ -14,6 +14,13 @@ if hash rbenv 2>/dev/null; then
 	eval "$(rbenv init -)"
 fi
 
+# nvm
+NVM_SCRIPT="$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+if [[ -f "$NVM_SCRIPT" ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  source "$NVM_SCRIPT"
+fi
+
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER="$HOMEBREW_PREFIX/bin/virtualenvwrapper.sh"
