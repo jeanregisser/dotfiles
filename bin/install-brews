@@ -55,6 +55,7 @@ FORMULAE=(
 	mackup
 	s3cmd
 	shellcheck
+	cv
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
 	)
