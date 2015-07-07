@@ -18,6 +18,7 @@ PACKAGES=(
   eslint-plugin-react
   babel-eslint
   aglio
+  node-gyp-install
   )
 
 npm install -g ${PACKAGES[@]}
