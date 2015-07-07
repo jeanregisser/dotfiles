@@ -19,6 +19,8 @@ PACKAGES=(
   babel-eslint
   aglio
   node-gyp-install
+  mermaid
+  phantomjs
   )
 
 npm install -g ${PACKAGES[@]}
