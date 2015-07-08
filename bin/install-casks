@@ -10,6 +10,7 @@ CASKS=(
 	caskroom/versions/sublime-text3
 	firefox
 	google-chrome
+	android-studio
 	dropbox
 	onepassword
 	gimp
