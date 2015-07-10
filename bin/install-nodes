@@ -5,7 +5,7 @@ source "$(dirname "$0")/script-helpers"
 msg "Install node.js versions"
 
 NODES=(
-  'iojs-v2.3.3'
+  'iojs-v2.3.4'
   )
 
 for item in "${NODES[@]}"
@@ -13,4 +13,4 @@ do
     nvm install $item
 done
 
-nvm alias default iojs-v2.3.3
+nvm alias default iojs
