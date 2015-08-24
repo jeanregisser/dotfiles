@@ -17,6 +17,7 @@ FORMULAE=(
 	git-extras
 	hub
 	legit
+	tig
 	the_silver_searcher
 	figlet
 	grc
@@ -27,6 +28,7 @@ FORMULAE=(
 	autojump
 	nmap
 	wget
+	htop
 	resty
 	rbenv
 	ruby-build

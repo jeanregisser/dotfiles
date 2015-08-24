@@ -20,9 +20,11 @@ CASKS=(
 	iterm2-beta
 	flux
 	slate
+	gitup
 	rowanj-gitx
 	github
 	sourcetree
+	sshfs
 	oclint
 	arq
 	xquartz
@@ -31,7 +33,7 @@ CASKS=(
 	beamer
 	trailer
 	hockeyapp
-	subtitles
+	#subtitles
 	hazel
 	vagrant
 	virtualbox
