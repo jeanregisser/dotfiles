@@ -59,6 +59,7 @@ FORMULAE=(
 	shellcheck
 	cv
 	peco
+	gpg2
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
 	)
