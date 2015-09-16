@@ -60,6 +60,7 @@ FORMULAE=(
 	cv
 	peco
 	gpg2
+	mediainfo
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
 	)
