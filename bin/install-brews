@@ -61,6 +61,7 @@ FORMULAE=(
 	peco
 	gpg2
 	mediainfo
+	unrar
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
 	)
