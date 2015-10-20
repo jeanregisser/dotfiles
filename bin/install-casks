@@ -69,6 +69,7 @@ CASKS=(
 	launchrocket
 	4k-video-downloader
 	subler
+	discord
 	caskroom/fonts/font-source-code-pro
 	caskroom/fonts/font-sauce-code-powerline
 	)
