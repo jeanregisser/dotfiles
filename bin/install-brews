@@ -40,6 +40,7 @@ FORMULAE=(
 	class-dump
 	gist
 	parallel
+	stormssh
 	mobile-shell
 	ssh-copy-id
 	uncrustify
