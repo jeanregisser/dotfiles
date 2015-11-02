@@ -53,6 +53,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 export EDITOR='vim'
+export REACT_EDITOR='subl'
 
 # Enable colors for ls, etc.
 if hash dircolors 2>/dev/null && [[ -f ~/.dir_colors ]]; then
