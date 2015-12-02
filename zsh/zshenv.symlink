@@ -1,3 +1,14 @@
+# Fixes El Capitan changing PATH in /etc/zprofile (on a new login shell after reading this file)
+# See http://www.zsh.org/mla/users/2015/msg00724.html
+setopt no_global_rcs
+
+# Prevent appending to PATH on nested shells
+if [[ $SHLVL != 1 ]]; then
+    return 0
+fi
+
+export PATH="/usr/local/bin:$PATH"
+
 # Use this var instead of $(brew --prefix xxx) as it's too slow (takes about 130ms per call!)
 export HOMEBREW_PREFIX="/usr/local"
 
