@@ -30,6 +30,7 @@ CASKS=(
 	xquartz
 	spotify
 	wireshark
+	mancy
 	hopper-disassembler
 	beamer
 	trailer
