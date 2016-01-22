@@ -63,6 +63,7 @@ FORMULAE=(
 	gpg2
 	mediainfo
 	unrar
+	ncdu
 	speedtest_cli
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
