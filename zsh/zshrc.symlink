@@ -99,5 +99,9 @@ if [[ -s "$GRC" ]]; then
   source "$GRC"
 fi
 
+# iTerm shell integration
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
 end_time="$(($EPOCHREALTIME*1000))"
 echo ".zshrc: $((int(end_time - start_time))) ms"
+
