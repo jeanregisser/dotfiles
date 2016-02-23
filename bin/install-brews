@@ -65,6 +65,7 @@ FORMULAE=(
 	unrar
 	ncdu
 	speedtest_cli
+	tccutil
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	caskroom/cask/brew-cask
 	)

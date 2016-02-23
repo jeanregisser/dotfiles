@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+source "$WORKON_HOME/selfspyenv/bin/activate"
+selfspy "$@"
+

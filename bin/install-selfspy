@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+source "$(dirname "$0")/script-helpers"
+
+set -e
+
+SELFSPY_PLIST="$HOME/Library/LaunchAgents/com.github.gurgeh.selfspy.plist"
+if [[ -f "$SELFSPY_PLIST" ]]; then
+    exit 0
+fi
+
+msg "Installing selfspy..."
+
+github-clone gurgeh/selfspy
+
+set +e
+mkvirtualenv selfspyenv
+workon selfspyenv
+set -e
+
+pip install -e /Users/jean/src/github.com/gurgeh/selfspy
+
+cat << EOF > "$SELFSPY_PLIST"
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.github.gurgeh.selfspy</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/jean/src/github.com/jeanregisser/dotfiles/bin/selfspy</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
+EOF
+
+sudo tccutil --insert /Users/jean/src/github.com/jeanregisser/dotfiles/bin/selfspy
+
+launchctl load "$SELFSPY_PLIST"
