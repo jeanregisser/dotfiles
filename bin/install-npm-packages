@@ -14,6 +14,7 @@ PACKAGES=(
   meteorite
   wscat
   react-native-cli
+  code-push-cli
   eslint
   eslint-plugin-react
   babel-eslint
