@@ -5,7 +5,7 @@ source "$(dirname "$0")/script-helpers"
 msg "Install node.js versions"
 
 NODES=(
-  'v4.2.1'
+  'v5.5.0'
   )
 
 for item in "${NODES[@]}"
