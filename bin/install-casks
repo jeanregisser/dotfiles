@@ -58,7 +58,8 @@ CASKS=(
 	genymotion
 	viscosity
 	bartender
-	simpholders-2-alpha
+	ios-console
+	simpholders
 	x-moto
 	inkscape
 	namebench
