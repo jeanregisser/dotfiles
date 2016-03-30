@@ -67,7 +67,6 @@ FORMULAE=(
 	speedtest_cli
 	tccutil
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
-	caskroom/cask/brew-cask
 	)
 
 INSTALLED_FORMULAE="$(brew list -1)"
