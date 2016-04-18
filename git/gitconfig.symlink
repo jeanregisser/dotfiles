@@ -23,3 +23,9 @@
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
 
+[user]
+	signingkey = CBF3B529
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
