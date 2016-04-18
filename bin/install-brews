@@ -61,6 +61,7 @@ FORMULAE=(
 	cv
 	peco
 	gpg2
+	keybase
 	mediainfo
 	unrar
 	ncdu
