@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+BIN_PATH="$(dirname "$0")"
+"$BIN_PATH/../../../catapult-project/catapult/tracing/bin/trace2html" "$@"
+

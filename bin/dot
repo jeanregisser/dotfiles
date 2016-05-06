@@ -39,6 +39,7 @@ msg "Cloning repos..."
 "$BIN_PATH/github-clone" mitmproxy/mitmproxy
 "$BIN_PATH/github-clone" facebook/chisel
 "$BIN_PATH/github-clone" square/PonyDebugger
+"$BIN_PATH/github-clone" catapult-project/catapult
 
 msg "Configuring OS X settings..."
 $BIN_PATH/set-osx-defaults.sh
