@@ -5,7 +5,9 @@ source "$(dirname "$0")/script-helpers"
 msg "Install node.js versions"
 
 NODES=(
-  'v5.5.0'
+  'v6.9.1'
+  'v7.5.0'
+  'v8.2.1'
   )
 
 for item in "${NODES[@]}"
@@ -13,4 +15,4 @@ do
     nvm install $item
 done
 
-nvm alias default node
+#nvm alias default node

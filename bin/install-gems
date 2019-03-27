@@ -12,6 +12,7 @@ GEMS=(
     ruby-lint
     scss-lint
     cocoapods
+    papertrail
 	)
 
 gem install --conservative ${GEMS[@]}

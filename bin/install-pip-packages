@@ -5,8 +5,10 @@ source "$(dirname "$0")/script-helpers"
 msg "Global pip packages"
 
 PACKAGES=(
+  virtualfish
 	virtualenvwrapper
 	howdoi
+  passlib
 	)
 
-pip install ${PACKAGES[@]}
+pip3 install ${PACKAGES[@]}

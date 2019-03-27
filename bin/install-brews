@@ -8,10 +8,11 @@ msg "Homebrew: Brews"
 brew update
 
 # Upgrade any already-installed formulae
-brew upgrade --all
+brew upgrade
 
 FORMULAE=(
 	coreutils
+	grep
 	"vim --override-system-vi"
 	git
 	git-extras
@@ -21,10 +22,11 @@ FORMULAE=(
 	the_silver_searcher
 	figlet
 	grc
-	homebrew/versions/mongodb24
 	mongodb
 	redis
 	nvm
+	# "yarn --ignore-dependencies"
+	fzf
 	autojump
 	nmap
 	wget
@@ -36,8 +38,10 @@ FORMULAE=(
 	libidn
 	libcouchbase
 	python
+	python3
 	mitmproxy
 	class-dump
+	cloc
 	gist
 	parallel
 	stormssh
@@ -46,6 +50,8 @@ FORMULAE=(
 	uncrustify
 	imagemagick
 	xctool
+	"android-ndk-r10e --without-android-sdk"
+	awscli
 	heroku-toolbelt
 	archey
 	tree
@@ -58,6 +64,7 @@ FORMULAE=(
 	mackup
 	s3cmd
 	shellcheck
+	lnav
 	cv
 	peco
 	gpg2
@@ -67,6 +74,11 @@ FORMULAE=(
 	ncdu
 	speedtest_cli
 	tccutil
+	mas
+	pass
+	pwgen
+	facebook/fb/fbsimctl
+	vitorgalvao/tiny-scripts/cask-repair
 	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	)
 

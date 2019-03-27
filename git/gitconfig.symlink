@@ -2,6 +2,7 @@
 	path = .gitconfig_private
 [core]
 	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
 [achievement]
 	upload = true
 [color]
@@ -22,6 +23,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
 	graft = !legit graft \"$@\"
+	diff-image = "!f() { GIT_DIFF_IMAGE_ENABLED=1 git diff \"$@\"; }; f"
 
 [user]
 	signingkey = CBF3B529
@@ -29,3 +31,5 @@
 	gpgsign = true
 [gpg]
 	program = gpg2
+[diff "image"]
+	command = git_diff_image

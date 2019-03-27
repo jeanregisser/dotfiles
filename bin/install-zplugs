@@ -1,0 +1,54 @@
+#!/usr/bin/env zsh
+
+if [[ -s "$HOME/.zplug/init.zsh" ]]; then
+  # zplug — A zsh plugin manager
+  export ZPLUG_HOME="$HOME/.zplug"
+  source "$ZPLUG_HOME/init.zsh"
+
+  zplug "lib/completion", from:oh-my-zsh
+  zplug "lib/history", from:oh-my-zsh
+  zplug "lib/directories", from:oh-my-zsh
+
+  zplug "plugins/git", from:oh-my-zsh, nice:10
+  zplug "plugins/git-extras", from:oh-my-zsh
+  zplug "plugins/github", from:oh-my-zsh
+  zplug "plugins/osx", from:oh-my-zsh
+  #zplug "plugins/bundler", from:oh-my-zsh
+  #zplug "plugins/rails", from:oh-my-zsh, nice:10
+  #zplug "plugins/ruby", from:oh-my-zsh
+  #zplug "plugins/gem", from:oh-my-zsh
+  zplug "plugins/heroku", from:oh-my-zsh
+  #zplug "plugins/brew", from:oh-my-zsh
+  zplug "plugins/brew-cask", from:oh-my-zsh, nice:10
+  #zplug "plugins/vagrant", from:oh-my-zsh
+  zplug "plugins/colored-man-pages", from:oh-my-zsh
+  zplug "plugins/meteor", from:oh-my-zsh
+  zplug "plugins/pip", from:oh-my-zsh
+  #zplug "plugins/npm", from:oh-my-zsh
+  #zplug "plugins/safe-paste", from:oh-my-zsh
+  zplug "plugins/web-search", from:oh-my-zsh
+  zplug "plugins/urltools", from:oh-my-zsh
+  zplug "plugins/pod", from:oh-my-zsh
+  zplug "plugins/docker", from:oh-my-zsh
+  zplug "plugins/nmap", from:oh-my-zsh
+  
+  zplug "zsh-users/zsh-completions"
+  zplug "zsh-users/zsh-syntax-highlighting"
+  zplug "zsh-users/zsh-history-substring-search"
+  zplug "zsh-users/zsh-autosuggestions"
+
+  # prompt
+  zplug "mafredri/zsh-async"
+  zplug "sindresorhus/pure"
+
+  # Install plugins if there are plugins that have not been installed
+  if ! zplug check --verbose; then
+      printf "Install? [y/N]: "
+      if read -q; then
+          echo; zplug install
+      fi
+  fi
+
+  # Then, source plugins and add commands to $PATH
+  zplug load --verbose
+fi

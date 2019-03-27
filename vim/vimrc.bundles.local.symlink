@@ -1,1 +1,2 @@
-Bundle 'laurentgoudet/vim-howdoi'
+" doesn't yet support python3, so disable for now
+" Bundle 'laurentgoudet/vim-howdoi'

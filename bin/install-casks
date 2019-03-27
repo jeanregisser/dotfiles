@@ -10,19 +10,21 @@ CASKS=(
 	caskroom/versions/sublime-text3
 	firefox
 	google-chrome
+	google-cloud-sdk
 	android-studio
+	#android-file-transfer
 	dropbox
-	onepassword
+	1password
 	gimp
 	hipchat
 	screenhero
 	skype
-	iterm2-beta
+	iterm2
 	flux
 	slate
 	gitup
 	rowanj-gitx
-	github
+	github-desktop
 	sourcetree
 	sshfs
 	oclint
@@ -32,10 +34,12 @@ CASKS=(
 	wireshark
 	mancy
 	hopper-disassembler
+	dash
 	beamer
 	trailer
-	hockeyapp
+	hockey
 	#subtitles
+	caption
 	hazel
 	vagrant
 	virtualbox
@@ -53,18 +57,16 @@ CASKS=(
 	cyberduck
 	vlc
 	deezer
-	rdio
-	smartloader
 	genymotion
 	viscosity
 	bartender
 	ios-console
+	opensim
 	simpholders
 	x-moto
 	inkscape
 	namebench
 	slack
-	sqwiggle
 	duet
 	couchbase-server-community
 	cronnix
@@ -72,6 +74,9 @@ CASKS=(
 	4k-video-downloader
 	subler
 	discord
+	playonmac
+	#logmein-hamachi
+	insomnia
 	caskroom/fonts/font-source-code-pro
 	caskroom/fonts/font-sauce-code-powerline
 	)

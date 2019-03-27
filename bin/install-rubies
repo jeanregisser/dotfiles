@@ -10,6 +10,7 @@ RUBIES=(
     '2.1.2'
     '2.1.5'
     '2.2.2'
+    '2.3.2'
     'rbx-2.2.9'
 	)
 
@@ -18,4 +19,4 @@ do
     rbenv install -s $item
 done
 
-rbenv global 2.2.2
+rbenv global 2.3.2

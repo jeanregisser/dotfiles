@@ -1,51 +1,12 @@
-zmodload zsh/datetime
-zmodload zsh/mathfunc
+#zmodload zsh/datetime
+#zmodload zsh/mathfunc
 start_time="$(($EPOCHREALTIME*1000))"
 
-if [[ -s "$HOME/src/github.com/zsh-users/antigen/antigen.zsh" ]]; then
-  # Antigen — A zsh plugin manager
-  source $HOME/src/github.com/zsh-users/antigen/antigen.zsh
-
-  # Load the oh-my-zsh's library.
-  antigen use oh-my-zsh
-
-  # Bundles
-  antigen bundles <<EOBUNDLES
-    git
-    git-extras
-    github
-    osx
-    bundler
-    rails
-    ruby
-    gem
-    heroku
-    brew
-    brew-cask
-    vagrant
-    colored-man
-    meteor
-    pip
-    npm
-    safe-paste
-    web-search
-    urltools
-    pod
-    docker
-    
-    # Syntax highlighting bundle
-    zsh-users/zsh-syntax-highlighting
-
-    # Legit completion
-    blueyed/legit extra/zsh-completion --branch=fix-zsh-completion
-EOBUNDLES
-
-  # Load the theme.
-  #antigen theme aussiegeek
-  antigen bundle sindresorhus/pure
-
-  # Tell antigen that you're done.
-  antigen apply
+# Load cached zplugs
+# Regenerate with install-zplugs
+if [[ -s "$HOME/.zplug/.cache" ]]; then
+  autoload -Uz compinit
+  source "$HOME/.zplug/.cache"
 fi
 
 # Customize to your needs...
@@ -69,6 +30,7 @@ alias uncrustify-objc='uncrustify -c ~/.uncrustify/objc.cfg -l OC --replace --no
 # Ruby/Rails
 alias b='bundle'
 alias bi='bi --verbose --path vendor'
+alias be='bundle exec'
 #alias rake='./bundle_bin/rake'
 alias tguard='TESTUNIT_ONLY=true guard'
 alias rguard='RSPEC_ONLY=true guard'
@@ -105,3 +67,5 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 end_time="$(($EPOCHREALTIME*1000))"
 echo ".zshrc: $((int(end_time - start_time))) ms"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

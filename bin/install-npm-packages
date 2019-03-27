@@ -11,17 +11,28 @@ PACKAGES=(
   coffeelint
   jsonlint
   js-yaml
+  jscodeshift
+  gitbook-cli
+  flow-typed
   meteorite
   wscat
   react-native-cli
+  react-native-git-upgrade
   code-push-cli
+  appcenter-cli
+  exp
   eslint
   eslint-plugin-react
   babel-eslint
   aglio
-  node-gyp-install
+  gatsby-cli
+  # node-gyp-install
   mermaid
   phantomjs
+  yarn
+  prettier
+  firebase-tools
+  stack-beautifier
   )
 
 npm install -g ${PACKAGES[@]}

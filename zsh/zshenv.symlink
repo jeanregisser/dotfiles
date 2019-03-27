@@ -1,3 +1,7 @@
+zmodload zsh/datetime
+zmodload zsh/mathfunc
+start_time="$(($EPOCHREALTIME*1000))"
+
 # Fixes El Capitan changing PATH in /etc/zprofile (on a new login shell after reading this file)
 # See http://www.zsh.org/mla/users/2015/msg00724.html
 setopt no_global_rcs
@@ -32,9 +36,13 @@ if [[ -f "$NVM_SCRIPT" ]]; then
   source "$NVM_SCRIPT"
 fi
 
+# Hacky nvm default. https://github.com/creationix/nvm/issues/860
+export PATH="$HOME/.nvm/versions/node/v8.11.1/bin:$PATH"
+
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER="$HOMEBREW_PREFIX/bin/virtualenvwrapper.sh"
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 if [[ -s "$VIRTUALENVWRAPPER" ]]; then
 	source "$VIRTUALENVWRAPPER"
 fi
@@ -45,4 +53,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+end_time="$(($EPOCHREALTIME*1000))"
+echo ".zshenv: $((int(end_time - start_time))) ms"
 

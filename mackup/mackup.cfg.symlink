@@ -1,6 +1,5 @@
 [applications_to_sync]
 my-files
-iterm2
 ssh
 heroku
 macvim
@@ -11,7 +10,6 @@ viscosity
 hazel
 dash
 xcode
-skype
 flux
 bartender
 cyberduck

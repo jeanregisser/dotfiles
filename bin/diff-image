@@ -1,0 +1,57 @@
+#!/usr/bin/env sh
+
+set -eu
+set -o pipefail
+
+f1="$1"
+f2="$2"
+
+name1="$(basename "$f1")"
+name2="$(basename "$f2")"
+ext="${name1##*.}"
+
+if diff "$f1" "$f2" >/dev/null
+then
+  exit 0
+fi
+
+
+exif() {
+  local b=$(basename "$1")
+  local d=$(mktemp -t "$b")
+  exiftool "$1" | grep -v "File Name" | \
+                  grep -v "Directory" | \
+                  grep -v "File Inode Change" | \
+                  grep -v "File Modification Date/Time" | \
+                  grep -v "File Permissions" \
+     > "$d"
+  echo "$d"
+}
+
+
+diff_clean_names() {
+  diff -u "$1" --label "$name1" "$2" --label "$name2" || true
+}
+
+
+d1=$(exif "$f1")
+d2=$(exif "$f2")
+diff_clean_names "$d1" "$d2"
+
+if compare "$f1" "$f2" /dev/null
+then
+  exit 0
+fi
+
+bn=$(basename "$f1")
+destfile=$(mktemp -t "$bn").png
+
+fuzz=
+if [ "$ext" = "jpeg" ] || [ "$ext" = "jpg" ]
+then
+  fuzz='-fuzz 5%'
+fi
+
+compare $fuzz "$f1" "$f2" png:- | montage -geometry +4+4 "$f1" - "$f2" png:- > "$destfile" 2>/dev/null || true
+
+open "$destfile"
