@@ -25,7 +25,7 @@ FORMULAE=(
 	mongodb
 	redis
 	nvm
-	# "yarn --ignore-dependencies"
+	yarn
 	fzf
 	autojump
 	nmap
@@ -50,7 +50,8 @@ FORMULAE=(
 	uncrustify
 	imagemagick
 	xctool
-	"android-ndk-r10e --without-android-sdk"
+	#"android-ndk-r10e --without-android-sdk"
+	pidcat
 	awscli
 	heroku-toolbelt
 	archey
@@ -79,7 +80,7 @@ FORMULAE=(
 	pwgen
 	facebook/fb/fbsimctl
 	vitorgalvao/tiny-scripts/cask-repair
-	"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
+	#"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
 	)
 
 INSTALLED_FORMULAE="$(brew list -1)"

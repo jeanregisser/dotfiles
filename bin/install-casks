@@ -5,7 +5,7 @@ source "$(dirname "$0")/script-helpers"
 msg "Homebrew: Casks"
 
 CASKS=(
-	macvim
+	#macvim
 	textmate
 	caskroom/versions/sublime-text3
 	firefox
@@ -77,6 +77,9 @@ CASKS=(
 	playonmac
 	#logmein-hamachi
 	insomnia
+	soundflower
+	#krisp
+	asciinema
 	caskroom/fonts/font-source-code-pro
 	caskroom/fonts/font-sauce-code-powerline
 	)

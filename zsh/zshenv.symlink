@@ -37,7 +37,7 @@ if [[ -f "$NVM_SCRIPT" ]]; then
 fi
 
 # Hacky nvm default. https://github.com/creationix/nvm/issues/860
-export PATH="$HOME/.nvm/versions/node/v8.11.1/bin:$PATH"
+export PATH="$HOME/.nvm/versions/node/v10.16.3/bin:$PATH"
 
 # Python virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
