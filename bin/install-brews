@@ -48,6 +48,7 @@ FORMULAE=(
 	stormssh
 	mobile-shell
 	ssh-copy-id
+	sshfs
 	uncrustify
 	imagemagick
 	xctool

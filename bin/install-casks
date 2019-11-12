@@ -8,6 +8,7 @@ CASKS=(
 	#macvim
 	# textmate
 	sublime-text
+	visual-studio-code
 	firefox
 	google-chrome
 	google-cloud-sdk
@@ -16,7 +17,6 @@ CASKS=(
 	# dropbox
 	1password
 	gimp
-	screenhero
 	skype
 	iterm2
 	flux
@@ -25,14 +25,13 @@ CASKS=(
 	# rowanj-gitx
 	# github-desktop
 	# sourcetree
-	sshfs
 	oclint
 	arq
 	xquartz
 	spotify
 	wireshark
-	mancy
-	hopper-disassembler
+	# mancy
+	# hopper-disassembler
 	dash
 	beamer
 	trailer
@@ -81,7 +80,7 @@ CASKS=(
 	asciinema
 	keybase
 	homebrew/cask-fonts/font-source-code-pro
-	homebrew/cask-fonts/font-sauce-code-powerline
+	homebrew/cask-fonts/font-source-code-pro-for-powerline
 	)
 
 INSTALLED_CASKS="$(brew cask list -1)"
