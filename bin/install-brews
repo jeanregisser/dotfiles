@@ -37,7 +37,7 @@ FORMULAE=(
 	ruby-build
 	libxml2
 	libidn
-	libcouchbase
+	# libcouchbase
 	python
 	python3
 	mitmproxy

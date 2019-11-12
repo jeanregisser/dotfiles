@@ -68,7 +68,7 @@ CASKS=(
 	namebench
 	slack
 	duet
-	couchbase-server-community
+	# couchbase-server-community
 	cronnix
 	launchrocket
 	4k-video-downloader
