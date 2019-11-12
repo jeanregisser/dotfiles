@@ -7,7 +7,7 @@ msg "Homebrew: Casks"
 CASKS=(
 	#macvim
 	# textmate
-	caskroom/versions/sublime-text3
+	sublime-text
 	firefox
 	google-chrome
 	google-cloud-sdk
@@ -36,7 +36,7 @@ CASKS=(
 	dash
 	beamer
 	trailer
-	hockey
+	# hockey
 	#subtitles
 	caption
 	hazel
@@ -80,8 +80,8 @@ CASKS=(
 	#krisp
 	asciinema
 	keybase
-	caskroom/fonts/font-source-code-pro
-	caskroom/fonts/font-sauce-code-powerline
+	homebrew/cask-fonts/font-source-code-pro
+	homebrew/cask-fonts/font-sauce-code-powerline
 	)
 
 INSTALLED_CASKS="$(brew cask list -1)"
