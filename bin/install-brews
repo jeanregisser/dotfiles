@@ -14,7 +14,7 @@ FORMULAE=(
 	fish
 	coreutils
 	grep
-	"vim --override-system-vi"
+	vim
 	git
 	git-extras
 	hub
