@@ -11,6 +11,7 @@ brew update
 brew upgrade
 
 FORMULAE=(
+	fish
 	coreutils
 	grep
 	"vim --override-system-vi"
