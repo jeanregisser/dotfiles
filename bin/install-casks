@@ -79,6 +79,7 @@ CASKS=(
 	#krisp
 	asciinema
 	keybase
+	gpg-suite
 	homebrew/cask-fonts/font-source-code-pro
 	homebrew/cask-fonts/font-source-code-pro-for-powerline
 	)
