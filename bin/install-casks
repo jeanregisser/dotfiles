@@ -6,26 +6,25 @@ msg "Homebrew: Casks"
 
 CASKS=(
 	#macvim
-	textmate
+	# textmate
 	caskroom/versions/sublime-text3
 	firefox
 	google-chrome
 	google-cloud-sdk
 	android-studio
 	#android-file-transfer
-	dropbox
+	# dropbox
 	1password
 	gimp
-	hipchat
 	screenhero
 	skype
 	iterm2
 	flux
 	slate
 	gitup
-	rowanj-gitx
-	github-desktop
-	sourcetree
+	# rowanj-gitx
+	# github-desktop
+	# sourcetree
 	sshfs
 	oclint
 	arq
@@ -74,7 +73,7 @@ CASKS=(
 	4k-video-downloader
 	subler
 	discord
-	playonmac
+	# playonmac
 	#logmein-hamachi
 	insomnia
 	soundflower
