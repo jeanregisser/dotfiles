@@ -80,6 +80,7 @@ CASKS=(
 	soundflower
 	#krisp
 	asciinema
+	keybase
 	caskroom/fonts/font-source-code-pro
 	caskroom/fonts/font-sauce-code-powerline
 	)
