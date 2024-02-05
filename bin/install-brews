@@ -14,18 +14,22 @@ FORMULAE=(
 	fish
 	coreutils
 	grep
+	bat
 	vim
 	git
 	git-extras
+	gh
 	hub
 	legit
 	tig
 	the_silver_searcher
+	ripgrep
 	figlet
 	grc
 	mongodb
 	redis
-	nvm
+	asdf
+	# nvm
 	yarn
 	fzf
 	autojump
@@ -33,11 +37,14 @@ FORMULAE=(
 	wget
 	htop
 	resty
-	rbenv
-	ruby-build
+	# rbenv
+	# ruby-build
+	go
+	rustup
 	libxml2
 	libidn
 	# libcouchbase
+	octave
 	python
 	python3
 	mitmproxy
@@ -45,6 +52,7 @@ FORMULAE=(
 	cloc
 	gist
 	parallel
+	openssh
 	stormssh
 	mobile-shell
 	ssh-copy-id
@@ -71,6 +79,7 @@ FORMULAE=(
 	cv
 	peco
 	gpg2
+	ykman
 	mediainfo
 	unrar
 	ncdu
@@ -79,9 +88,13 @@ FORMULAE=(
 	mas
 	pass
 	pwgen
+	kubernetes-helm
 	facebook/fb/fbsimctl
 	vitorgalvao/tiny-scripts/cask-repair
+	robotsandpencils/made/xcodes
 	#"https://raw.github.com/apiaryio/drafter/master/tools/homebrew/drafter.rb --HEAD"
+	macfuse
+	vorta
 	)
 
 INSTALLED_FORMULAE="$(brew list -1)"

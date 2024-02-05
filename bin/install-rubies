@@ -5,13 +5,8 @@ source "$(dirname "$0")/script-helpers"
 msg "Install and build rubies"
 
 RUBIES=(
-	'2.1.0'
-    '2.1.1'
-    '2.1.2'
-    '2.1.5'
-    '2.2.2'
-    '2.3.2'
-    'rbx-2.2.9'
+	'2.6.5'
+	'3.0.0'
 	)
 
 for item in "${RUBIES[@]}"
@@ -19,4 +14,4 @@ do
     rbenv install -s $item
 done
 
-rbenv global 2.3.2
+rbenv global 3.0.0

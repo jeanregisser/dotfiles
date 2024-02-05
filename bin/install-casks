@@ -13,6 +13,10 @@ CASKS=(
 	google-chrome
 	google-cloud-sdk
 	android-studio
+	# AdoptOpenJDK/openjdk/adoptopenjdk8
+	homebrew/cask-versions/zulu11
+	scrcpy
+	react-native-debugger
 	#android-file-transfer
 	# dropbox
 	1password
@@ -25,7 +29,7 @@ CASKS=(
 	# rowanj-gitx
 	# github-desktop
 	# sourcetree
-	oclint
+	# oclint
 	arq
 	xquartz
 	spotify
@@ -52,7 +56,7 @@ CASKS=(
 	omnigraffle
 	handbrake
 	teamviewer
-	cyberduck
+	#cyberduck
 	vlc
 	deezer
 	genymotion
@@ -65,7 +69,7 @@ CASKS=(
 	inkscape
 	namebench
 	slack
-	duet
+	#duet
 	# couchbase-server-community
 	cronnix
 	launchrocket
@@ -75,13 +79,17 @@ CASKS=(
 	# playonmac
 	#logmein-hamachi
 	insomnia
-	soundflower
+	#soundflower
+	blackhole
 	#krisp
 	asciinema
 	keybase
 	gpg-suite
+	amethyst
 	homebrew/cask-fonts/font-source-code-pro
 	homebrew/cask-fonts/font-source-code-pro-for-powerline
+	homebrew/cask-driver/yubico-yubikey-manager
+	borgbackup/tap/borgbackup-fuse
 	)
 
 INSTALLED_CASKS="$(brew cask list -1)"
