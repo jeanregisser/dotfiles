@@ -29,6 +29,7 @@ FORMULAE=(
 	mongodb
 	redis
 	asdf
+	mise
 	# nvm
 	yarn
 	fzf
